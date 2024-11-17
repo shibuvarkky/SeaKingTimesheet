@@ -1,0 +1,29 @@
+<!-- src/app/homepage/homepage.component.html -->
+<div class="header">
+    <button mat-raised-button color="primary" (click)="goToPrevious()">Prev</button>
+    <span>{{ selectedDate | date: 'fullDate' }}</span>
+    <button mat-raised-button color="primary" (click)="goToNext()">Next</button>
+  </div>
+  
+  <div class="timesheet-list">
+    <div *ngFor="let entry of entries" class="timesheet-item">
+      <div>
+        <p>{{ entry.jobNumber }} - {{ entry.jobTitle }}</p>
+        <p>{{ entry.startTime }} - {{ entry.endTime }} | {{ entry.hours }} Hours</p>
+      </div>
+      <div class="actions">
+        <button mat-icon-button color="primary" (click)="editEntry(entry.id)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="deleteEntry(entry.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Floating Add Button -->
+  <button mat-fab color="primary" aria-label="Add" routerLink="/add-entry" class="add-button">
+    <mat-icon>add</mat-icon>
+  </button>
+  

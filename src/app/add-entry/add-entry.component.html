@@ -1,0 +1,43 @@
+<!-- src/app/add-entry/add-entry.component.html -->
+<div class="entry-form">
+  <h2>Add New Entry</h2>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Job Number</mat-label>
+    <input matInput [(ngModel)]="entry.jobNumber" placeholder="Enter Job Number">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Job Title</mat-label>
+    <input matInput [(ngModel)]="entry.jobTitle" placeholder="Enter Job Title">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Date</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="entry.date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Start Time</mat-label>
+    <input matInput [(ngModel)]="entry.startTime" type="time">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>End Time</mat-label>
+    <input matInput [(ngModel)]="entry.endTime" type="time">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Hours</mat-label>
+    <input matInput [(ngModel)]="entry.hours" type="number">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Expenses</mat-label>
+    <input matInput [(ngModel)]="entry.expenses" type="number">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="saveEntry()">Save</button>
+</div>

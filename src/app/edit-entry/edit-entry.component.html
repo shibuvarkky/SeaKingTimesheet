@@ -1,0 +1,32 @@
+<!-- src/app/edit-entry/edit-entry.component.html -->
+<div class="entry-form">
+    <h2>Edit Entry</h2>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Job Number</mat-label>
+      <input matInput [(ngModel)]="entry.jobNumber" name="jobNumber" required>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Job Title</mat-label>
+      <input matInput [(ngModel)]="entry.jobTitle" name="jobTitle" required>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Start Time</mat-label>
+      <input matInput [(ngModel)]="entry.startTime" name="startTime" type="time" required>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>End Time</mat-label>
+      <input matInput [(ngModel)]="entry.endTime" name="endTime" type="time" required>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Hours</mat-label>
+      <input matInput [(ngModel)]="entry.hours" name="hours" type="number" required>
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="saveEntry()">Save</button>
+  </div>
+  

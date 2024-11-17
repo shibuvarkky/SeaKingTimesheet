@@ -1,0 +1,17 @@
+{
+  "timesheetEntries": [
+    {
+      "id": 1,
+      "jobNumber": "1234",
+      "jobTitle": "Lorem Ipsum - Vessel 1",
+      "date": "2023-02-03",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "hours": 3,
+      "overtimeHours": 0,
+      "doubleTimeHours": 0,
+      "expenses": 10,
+      "checked": false
+    }
+  ]
+}

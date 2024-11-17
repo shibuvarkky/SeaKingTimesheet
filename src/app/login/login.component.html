@@ -1,0 +1,16 @@
+<!-- src/app/login/login.component.html -->
+<div class="login-container">
+  <h1 class="login-title">SeaKing Time Sheet</h1>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="email" type="email" placeholder="Enter your email">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput [(ngModel)]="password" type="password" placeholder="Enter your password">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="login()">Login</button>
+</div>
